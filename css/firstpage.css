@@ -1,1 +1,35 @@
+.carousel {
+  height: 500px;
+}
 
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {
+  height: 100%;
+  width: auto;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.buttons {
+    margin-top: 70px;
+}
+
+.btn {
+    font-size: 1.5rem;
+    margin: 8px;
+}
+
+.btn:focus {
+  box-shadow: none;
+}
+
+.btn-outline-info{
+    background-color: #e9fafc;
+}
+
+.btn-outline-primary {
+    background-color: #e6f2ff;
+}
