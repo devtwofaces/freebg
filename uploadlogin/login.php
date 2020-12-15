@@ -1,5 +1,6 @@
 <?php 
 
+session_start();
 
 if(isset($_POST['username']) and isset($_POST['password'])){
 
@@ -9,9 +10,6 @@ if(isset($_POST['username']) and isset($_POST['password'])){
 
     $username = trim(htmlentities(strip_tags($username)));
     $password = trim(htmlentities(strip_tags($password)));
-
-    echo $username." ".$password;
-
 
     if($username=="admin" && $password=="admin"){
         $_SESSION['onlyadminsallowed']=$username;
