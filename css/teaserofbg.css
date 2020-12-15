@@ -1,0 +1,39 @@
+body {
+  font-family: Rasa-bold;
+text-align: justify;
+}
+
+
+
+h1 {
+  font-family: "Rasa-black";
+  font-size: 3rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Rasa-bold";
+  font-size: 2rem;
+}
+#testimonials{
+
+  text-align: center;
+  background-color:
+ #adc2eb;
+}
+
+.testimonial-image{
+  width: 30%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+.carousel-item{
+  padding: 7% 15%;
+}
+#footer{
+  text-align: center;
+  font-size: 6rem;
+  line-height: 1.5;
+}
