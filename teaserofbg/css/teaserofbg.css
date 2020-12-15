@@ -1,1 +1,15 @@
+body {
+  font-family: Rasa;
+}
 
+h1 {
+  font-family: "Rasa-Regular";
+  font-size: 3.5rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Rasa-bold";
+  font-size: 1.5rem;
+}
