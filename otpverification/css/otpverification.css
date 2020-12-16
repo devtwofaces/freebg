@@ -1,1 +1,38 @@
+.card {
+    width: 350px;
+    padding: 10px;
+    border-radius: 20px;
+    background: #fcf8ec;
+    border: none;
+    height: 350px;
+    position: relative
+}
 
+.container {
+    height: 100vh
+}
+
+body {
+    background: #;
+}
+
+.mobile-text {
+    color: #;
+    font-size: 15px
+}
+
+.form-control {
+    margin-right: 12px
+}
+
+.form-control:focus {
+    color: #;
+    background-color: #e;
+    border-color: #;
+    outline: 0;
+    box-shadow: none
+}
+
+.cursor {
+    cursor: pointer
+}
