@@ -5,32 +5,31 @@
 
 <head lang="en">
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-    <title> Free Bhagavad Gita </title>
+  <title> Free Bhagavad Gita </title>
 
 
-<!-- Production version popperjs-->
-<script src="https://unpkg.com/@popperjs/core@2"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
-<link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Production version popperjs-->
+  <script src="https://unpkg.com/@popperjs/core@2"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/bootstrap.min.css">
 
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
 
 
-<!-- LINKS TO CUSTOM JS & CSS FILES -->
+  <!-- LINKS TO CUSTOM JS & CSS FILES -->
 
-<link rel="stylesheet" href="css/orderfreegita.css">
-<script src="js/orderfreegita.js"></script>
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
-    async defer>
-</script>
+  <link rel="stylesheet" href="css/orderfreegita.css">
+  <script src="js/orderfreegita.js"></script>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer>
+  </script>
 
 </head>
 
@@ -38,132 +37,95 @@
 <body>
 
 
-<div class="container">
-<div class="center">
+  <div class="container">
+    <div class="center">
+      <div class="col-md-8 order-md-1">
+        <h2 class="mb-3">Contact Details</h2>
+
+        <form>
+
+          <div class="row">
+            <div class="col md-8">
+              <label for="first name">First Name<span style="color:red">*</span></label>
+              <input type="text" class="form-control" placeholder="">
+              <br>
+            </div>
+
+            <div class="col">
+              <label for="last name">Last Name<span style="color:red">*</span></label>
+              <input type="text" class="form-control" placeholder="">
+              <br>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="form-group col-md-12">
+                <label for="phone number">Phone Number (Enter phone number without +1)<span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="phone number" placeholder="">
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <div class="row">
+              <div class="form-group col-md-12">
+                <label for="address 1">Address Line 1<span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="address 1" placeholder="Quebec City">
+              </div>
+            </div>
+          </div>
 
 
+          <div class="form-group">
+            <div class="row">
+              <div class="form-group col-md-12">
+                <label for="address 2">Address Line 2 (Optional)</label>
+                <input type="text" class="form-control" id="address 2" placeholder="">
+              </div>
+            </div>
+          </div>
 
+          <div class="form-group">
+            <div class="row">
+              <div class="form-group col-md-12">
+                <label for="landmark">Landmark (Optional)</label>
+                <input type="text" class="form-control" id="landmark" placeholder="Apartment or suite">
+              </div>
+            </div>
+          </div>
 
+          <div class="form-group">
+            <div class="row">
+              <div class="form-group col-md-12">
+                <label for="email Address">Email Address<span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="email address" placeholder="you@example.com">
+              </div>
+            </div>
+          </div>
 
+          <div class="form-group">
+            <div class="row">
+              <div class="form-group col-md-12">
+                <label for="postal code">Postal Code<span style="color:red">*</span></label>
+                <input type="text" class="form-control" id="postal Code" placeholder="">
+              </div>
+            </div>
+          </div>
 
+        </form>
 
+        <h3>CAPTCHA</h3>
+        <hr>
 
-
-
-
-
-     <div class="col-md-8 order-md-1">
-
-   <h2 class="mb-3">Contact Details</h2>
-
-
-  <form>
-
-    <div class="row">
-     <div class="col md-8">
-
-
-
-
-
-      <label for="first name">First Name<span style="color:red">*</span></label>
-      <input type="text" class="form-control" placeholder="">
-    </div>
-
-  <div class="col">
-
-
-
-
-      <label for="last name">Last Name<span style="color:red">*</span></label>
-      <input type="text" class="form-control" placeholder="">
-    </div>
-  </div>
-
-
-
-<div class="form-group">
-<div class="row">
-
-
-  <div class="form-group col-md-6">
-        <label for="phone number">Phone Number<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="phone number" placeholder="">
+        <form action="?" method="POST">
+          <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+          <br>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
       </div>
     </div>
 
+</body>
 
-<div class="form-group">
-  <div class="row">
-      <div class="form-group col-md-12">
-
-
-        <label for="address 1">Address Line 1<span style="color:red">*</span></label>
-        <input type="text" class="form-control" id="address 1" placeholder="Quebec City">
-
-    </div>
-  </div>
-
-
-
-      <div class="form-group">
-
-
-        <div class="row">
-            <div class="form-group col-md-12">
-      <label for="address 2">Address Line 2 (Optional)</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="">
-    </div>
-</div>
-
-
-      <div class="form-group">
-
-        <div class="row">
-            <div class="form-group col-md-12">
-      <label for="landmark">Landmark (Optional)</label>
-      <input type="text" class="form-control" id="landmark" placeholder="Apartment or suite">
-    </div>
-</div>
-
-
- <div class="form-group">
-   <div class="row">
-       <div class="form-group col-md-12">
-
-      <label for="email Address">Email Address<span style="color:red">*</span></label>
-      <input type="text" class="form-control" id="email address" placeholder="you@example.com">
-    </div>
-  </div>
-
-
-
-   <div class="form-group">
-
-
-     <div class="row">
-         <div class="form-group col-md-12">
-
-      <label for="postal code">Postal Code<span style="color:red">*</span></label>
-      <input type="text" class="form-control" id="postal Code" placeholder="">
-    </div>
-  </div>
-
-
-
-</from>
-
-  <h3>CAPTCHA</h3>
-  <hr>
-
-    <form action="?" method="POST">
-      <div class="g-recaptcha" data-sitekey="your_site_key"></div>
-      <br/>
-  <button type="submit" class="btn btn-primary">Submit</button>
-
-
-
-
-</div>
-</div>
 </html>
