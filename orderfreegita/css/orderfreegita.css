@@ -1,39 +1,40 @@
-body{
-  background-color: #faf2f2;
-  font-size: 30px;
-  font-family: 'Rasa', serif;
-  font-style: normal;
-  line-height: 1.5em;
+
+h4
+{
+  font-size: 35px;
+  font-family: Merriweather;
 }
-p{
-  font-size: 25px;
-}
-
-
-
-
-form{
-  margin: 0.4em;
-}
-
-.contact-form{
-  margin:0px;
-  padding: 10px 0px 10px 0px;
-  text-align: justify;
-  border-radius: 15px 15px 0px 0px;
-}
-
-label{
-  width:360px;
-  margin: 12px;
-  padding: 0px 0px ;
-  height: 35px;
+div
+{
+  font-size: 22px;
+  font-family: Merriweather;
+  display: block;
 
 }
-input{
-  height: 1.2em;
-}
-.required{
-  color: red;
-  padding: 3px;
-}
+
+    html{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        height:150%;
+
+        margin: 0;
+        padding: 0;
+        background:#f9f7cf;
+    }
+    body {
+        margin: 0;
+        flex: 0 1 auto;
+        align-self: auto;
+        /*recommend 1920 / 1080 max based on usage stats, use 100% to that point*/
+        width: 200%
+        max-width: 1920px;
+        height: 100%;
+        max-height: 1920px;
+        background:#f2dcbb;
+        -webkit-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.85);
+        -moz-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.85);
+        box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.85);
+    }
