@@ -27,6 +27,10 @@
 
 <link rel="stylesheet" href="css/orderfreegita.css">
 <script src="js/orderfreegita.js"></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit"
+    async defer>
+</script>
 
 </head>
 
@@ -35,6 +39,11 @@
 
 
 <div class="container">
+<div class="center">
+
+
+
+
 
 
 
@@ -51,7 +60,7 @@
   <form>
 
     <div class="row">
-     <div class="col">
+     <div class="col md-8">
 
 
 
@@ -86,7 +95,7 @@
 
 <div class="form-group">
   <div class="row">
-      <div class="form-group col-md-10">
+      <div class="form-group col-md-12">
 
 
         <label for="address 1">Address Line 1<span style="color:red">*</span></label>
@@ -101,7 +110,7 @@
 
 
         <div class="row">
-            <div class="form-group col-md-10">
+            <div class="form-group col-md-12">
       <label for="address 2">Address Line 2 (Optional)</label>
       <input type="text" class="form-control" id="inputAddress" placeholder="">
     </div>
@@ -111,7 +120,7 @@
       <div class="form-group">
 
         <div class="row">
-            <div class="form-group col-md-10">
+            <div class="form-group col-md-12">
       <label for="landmark">Landmark (Optional)</label>
       <input type="text" class="form-control" id="landmark" placeholder="Apartment or suite">
     </div>
@@ -120,7 +129,7 @@
 
  <div class="form-group">
    <div class="row">
-       <div class="form-group col-md-10">
+       <div class="form-group col-md-12">
 
       <label for="email Address">Email Address<span style="color:red">*</span></label>
       <input type="text" class="form-control" id="email address" placeholder="you@example.com">
@@ -133,7 +142,7 @@
 
 
      <div class="row">
-         <div class="form-group col-md-10">
+         <div class="form-group col-md-12">
 
       <label for="postal code">Postal Code<span style="color:red">*</span></label>
       <input type="text" class="form-control" id="postal Code" placeholder="">
@@ -146,10 +155,15 @@
 
   <h3>CAPTCHA</h3>
   <hr>
+
+    <form action="?" method="POST">
+      <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+      <br/>
   <button type="submit" class="btn btn-primary">Submit</button>
 
 
 
 
+</div>
 </div>
 </html>
