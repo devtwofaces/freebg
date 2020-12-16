@@ -1,40 +1,12 @@
-
-h4
-{
-  font-size: 35px;
-  font-family: Merriweather;
+.container{
+  background-color: #f4f4f4;
 }
-div
-{
-  font-size: 22px;
-  font-family: Merriweather;
-  display: block;
-
+body{
+  background-color: #f6ecf0;
+  font-size: 25px;
+  font-family: serif;
 }
-
-    html{
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        height:150%;
-
-        margin: 0;
-        padding: 0;
-        background:#f9f7cf;
-    }
-    body {
-        margin: 0;
-        flex: 0 1 auto;
-        align-self: auto;
-        /*recommend 1920 / 1080 max based on usage stats, use 100% to that point*/
-        width: 200%
-        max-width: 1920px;
-        height: 100%;
-        max-height: 1920px;
-        background:#f2dcbb;
-        -webkit-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.85);
-        -moz-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.85);
-        box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.85);
-    }
+h2{
+  font-family: sans-serif;
+  font-family: 40px;
+}
