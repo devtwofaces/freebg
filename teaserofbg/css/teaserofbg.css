@@ -3,29 +3,11 @@ body {
   text-align: justify;
   font-size: 22px;
 
-
-
-
 }
+
 h1
 {
   margin-top: 0;
-}
-.top{
-
-    background-color: #98acf8;
-
-
-}
-
-.top-container{
-
-
-}
-
-h5{
-  text-align: center;
-  font-family: "rasa-black";
 }
 
 .top {
@@ -39,6 +21,12 @@ h5{
 h3 {
   font-family: "Rasa-bold";
   font-size: 2rem;
+    padding: 3% 8%;
+}
+
+h5{
+  font-family: "Rasa-regular";
+
 }
 
 
@@ -204,21 +192,13 @@ h3 {
 
 .carousel-inner{
   padding: 7% 18%;
-  background-color: #ffdf80;
-}
-
-#footer{
-  text-align: center;
-  font-size: 6rem;
-  line-height: 1.5;
+  background-color: #ccffff;
+  height: 700px;
 }
 
 
-.first-container{
 
-  background-color: royalblue;
 
-}
 
 #krishna{
 
