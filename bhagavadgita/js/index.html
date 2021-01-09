@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head lang="en">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title> Bhagavad Gita </title>
+
+        <!-- Production version popperjs-->
+        <script src="https://unpkg.com/@popperjs/core@2"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
+
+        <!-- LINKS TO CUSTOM JS & CSS FILES -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+        <link rel="stylesheet" href="css/teaserofbg.css">
+        <script src="js/teaserofbg.js"></script>
+    </head>
+
+
+    <body>
+        
+        <div class="navigation-wrap bg-light start-header start-style">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <nav class="navbar navbar-expand-md navbar-light">
+
+                            <a class="navbar-brand" href="../index.html">BHAGAVAD GITA</a>
+
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ml-auto py-4 py-md-0">
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" href="../famousPersonalities/">CELEBRITIES ON GITA</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link" href="../aboutus/">ABOUT US</a>
+                                    </li>
+                                    <li class="nav-item pl-4 pl-md-0 ml-0 ml-md-4">
+                                        <a class="nav-link orderlink" href="../orderfreegita/">ORDER FREE GITA</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container fd">
+            <div class="first-container">
+                <img src="img/krishna.jpg" alt="Krishna" id="krishna">
+            </div>
+
+            <div class="container-fluid">
+                <div class="card">
+
+                    <div class="app" id="app">
+                        <div class="accordions">
+                            <div class="container actrl">
+                                <div class="accordions__controls"><button class="accordions__control" v-on:click="toggleAll()" v-html="toggleAllLabel">Expand all</button></div>
+                            </div>
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('What Is Bhagavad-Gita?')" v-bind:class="{ 'accordions__button--active': isOpen('What Is Bhagavad-Gita?') }"> What Is Bhagavad-Gita? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('What Is Bhagavad-Gita?')" v-bind:class="{ 'accordions__button--active': isOpen('What Is Bhagavad-Gita?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('What Is Bhagavad-Gita?') }">
+                                        <p>
+
+                                            <ul>
+                                                <li style="list-style-type: none;"> Bhagavad-Gita is the essence of all the Vedic knowledge and is one of the most important Upanishads in Vedic Literature. </li>     
+                                            </ul>
+                                            <ul>
+                                                <li style="list-style-type: none;"> Bhagavad-Gita is a classic of timeless wisdom, the summum bonum of spiritual truth. It has deeply influenced the thinking of generation of philosophers, theologians, educators, scientists and authors all over the world. </li>     
+                                            </ul>
+                                            <ul>
+                                                <li style="list-style-type: none;"> Bhagavad-Gita originally appears in the form of 700 Sanskrit versions, as an episode of the Mahabharata, a great historical epic. </li>     
+                                            </ul>
+   
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('What Is Its Purpose?')" v-bind:class="{ 'accordions__button--active': isOpen('What Is Its Purpose?') }"> What Is Its Purpose? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('What Is Its Purpose?')" v-bind:class="{ 'accordions__button--active': isOpen('What Is Its Purpose?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('What Is Its Purpose?') }">
+                                        <p>
+
+                                            <ul>
+                                                <li style="list-style-type: decimal;"> To deliver mankind from Ignorance </li> 
+                                        
+                                                <ul>
+                                                    <li style="list-style-type: lower-alpha;"> Every man is in difficulty in so many ways, as Arjuna was in difficulty in having to fight the battle of Kurukshetra. Arjuna, forgetful of his prescribed duties as a kshatriya(warrior), whose duty is to fight for a righteous cause in a holy war. </li>    
+                                                    <li style="list-style-type: lower-alpha;"> Lord Krishna, who agreed to act as the driver of Arjuna chariot see his friend and devotee in illusion and perplexity. He than proceeds to enlighten Arjuna regarding his immediate social duty as a warrior and more important, his eternal duty or nature (Sanatana-dharma) as a spirit soul. </li>    
+                                                </ul>
+                                                <br>
+                                                <li style="list-style-type: decimal;"> To revive the eternal relationship of love between each soul and God </li>    
+                                             
+                                                <ul>
+                                                    <li style="list-style-type: lower-alpha;"> Krishna speaks for the benefits of all souls, who have forgotten their eternal nature and eternal relationship of love with him. To revive this relationship is the ultimate goal of our existence. </li>    
+                                                </ul>
+                                            </ul>
+
+                                            
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+                 
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('Who am I?')" v-bind:class="{ 'accordions__button--active': isOpen('Who am I?') }"> Who am I? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('Who am I?')" v-bind:class="{ 'accordions__button--active': isOpen('Who am I?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('Who am I?') }">
+                                        <p>
+                                            <ul>
+                                                <li> This question has legged fellows offers from time in memorial and since man is a “thinking animal” he is not simply satisfied by trying to fulfill his basic needs. He asked many questions about his surroundings, his planet, his universe and about the mystery of his own existence - the mystery of who am I? </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Modern science deal with this vital question in vary mechanic  manner, stating that man is nothing but a combination of certain material elements, the smallest part of which are atoms or electrons, which constitute the origin of life. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> But, am I simply a bunch of atoms? Is this really life? Thankfully some thoughtful scientists are not so convinced.  Noble laureate Albert Szent-Gyorgyi commented, “In my search for life I ended up with atoms and electrons which have no life at all, and somewhere along the line, life has run out through my fingers.” </li>
+                                            </ul>
+                                            <ul>
+                                                <li> And then, what is ‘death’? The law defines death as the “absence of life” but no clear understanding exists today on the exact nature of life.  How, then, would one define life?  Life is simply distinguished by certain symptoms and hence both “life” and “death” remain great puzzles. </li>
+                                            </ul>
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('What is life?')" v-bind:class="{ 'accordions__button--active': isOpen('What is life?') }"> What is life? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('What is life?')" v-bind:class="{ 'accordions__button--active': isOpen('What is life?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('What is life?') }">
+                                        <p>
+                                            <ul>
+                                                <li style="list-style-type: none;"> To understand this let us start with a simple illustration of a play which is being watched by 2 entities, </li>
+                                          
+                                            </ul>
+                                            <ul>
+                                                <ul>
+                                                    <li style="list-style-type:disc;"> a man (living being)  </li>
+                                                    <li style="list-style-type:disc;"> a camera (non living being)  </li>
+                                                </ul>
+                                            </ul>
+                                            <ul>
+                                                <li style="list-style-type: none;"> But still there is a distinct difference between the observers. So what is the difference between the man and the camera? It is consciousness in other words Life Is Consciousness. </li>
+                                            </ul>
+                                          
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('Why One Should Try To Understand Bhagavad-Gita?')" v-bind:class="{ 'accordions__button--active': isOpen('Why One Should Try To Understand Bhagavad-Gita?') }"> Why One Should Try To Understand Bhagavad-Gita? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('Why One Should Try To Understand Bhagavad-Gita?')" v-bind:class="{ 'accordions__button--active': isOpen('Why One Should Try To Understand Bhagavad-Gita?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('Why One Should Try To Understand Bhagavad-Gita?') }">
+                                        <p>
+                                            <ul>
+                                                <li> The activities of eating, sleeping, mating and defending are common in animals and human beings. The human beings are considered superior only when they inquire about the Absolute Truth, otherwise they are considered as good as animal. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> By understanding the Bhagavad-Gita, it is possible to understand the relationship between the GOD and the SOUL. This is called ‘Sambandha’. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Process of reviving the soul’s relationship with God, this is called Abhidheya. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> To make a permanent solution to the suffering in this world. </li>
+                                            </ul>
+
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+         
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('What Is The Subject Matter Discussed In Bhagavad-Gita?')" v-bind:class="{ 'accordions__button--active': isOpen('What Is The Subject Matter Discussed In Bhagavad-Gita?') }"> What Is The Subject Matter Discussed In Bhagavad-Gita? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('What Is The Subject Matter Discussed In Bhagavad-Gita?')" v-bind:class="{ 'accordions__button--active': isOpen('What Is The Subject Matter Discussed In Bhagavad-Gita?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('What Is The Subject Matter Discussed In Bhagavad-Gita?') }">
+                                        <p>
+                   
+                                            <ul>
+                                                <li style="list-style-type: none;">  The Bhagavad-Gita essentially deals with the following five topics. </li>
+                                                <br>
+                                                <ul>
+                                                    <li style="list-style-type: decimal;"> Eswara (God) </li>
+                                                    <li style="list-style-type: decimal;"> Jiva (Spirit-Soul) </li>
+                                                    <li style="list-style-type: decimal;"> Prakriti (Material nature) </li>
+                                                    <li style="list-style-type: decimal;"> Kala (Time) </li>
+                                                    <li style="list-style-type: decimal;"> Karma (Activity) </li>
+                                                </ul>
+                                            </ul>
+                                            
+
+
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+
+
+
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('Process Of Acquiring Knowledge')" v-bind:class="{ 'accordions__button--active': isOpen('Process Of Acquiring Knowledge') }"> Process Of Acquiring Knowledge </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('Process Of Acquiring Knowledge')" v-bind:class="{ 'accordions__button--active': isOpen('Process Of Acquiring Knowledge') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('Process Of Acquiring Knowledge') }">
+                                        <p>
+                                            <ul>
+                                                <li> Modern science has absolutely no understanding of the first two of the five subjects of Bhagavad-Gita (Isvara and Jiva) and very limited and imperfect understanding of the last three subjects (Prakriti, Kala and Karma). </li>
+                                            </ul>
+                                            <ul>
+                                                <li> This is because the very process of acquiring knowledge that it follows is defective. It is called the ascending or inductive process (aroha-pantha). </li>
+                                            </ul>
+                                            <ul>
+                                                <li> The inductive or ascending process means to not accept any authority and to try to find out the truth by one’s own endeavor and speculation. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> As opposed to the inductive or ascending process, is the deductive or descending process (Avaroha-Pantha). </li>
+                                            </ul>
+                                            <ul>
+                                                <li> The deductive or the descending process means to accept a bona fide authority and learn the truth by inquiring from that authority. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> The inductive process is always fraught with uncertainty and inaccuracy. </li>
+                                            </ul>
+                                            <ul>
+                                                <li> Scriptures like the Bhagavad-Gita are the perfect authority from which we can acquired knowledge, because they are the word of God. This is the simple and straightforward method to obtain true knowledge. </li>
+                                            </ul>
+
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('What  is Scripture?')" v-bind:class="{ 'accordions__button--active': isOpen('What  is Scripture?') }"> What  is Scripture? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('What  is Scripture?')" v-bind:class="{ 'accordions__button--active': isOpen('What  is Scripture?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('What  is Scripture?') }">
+                                        <p>
+                                            <ul>
+                                                <li> The word of GOD </li>
+                                                <li> The law book of life </li>
+                                                <li> A manual for the universe </li>
+                                                <li> Absolute knowledge </li>
+                                                <li> Perfect Science </li>
+                                            </ul>
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('What is Consciousness?')" v-bind:class="{ 'accordions__button--active': isOpen('What is Consciousness?') }"> What is Consciousness? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('What is Consciousness?')" v-bind:class="{ 'accordions__button--active': isOpen('What is Consciousness?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('What is Consciousness?') }">
+                                        <p>
+                                            <ul>
+                                                <li style="list-style-type: none;"> Consciousness means the awareness of being "who I am". </li>
+                                          
+                                            </ul>
+                                            
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('What is the source of consciousness?')" v-bind:class="{ 'accordions__button--active': isOpen('What is the source of consciousness?') }"> What is the source of consciousness? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('What is the source of consciousness?')" v-bind:class="{ 'accordions__button--active': isOpen('What is the source of consciousness?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('What is the source of consciousness?') }">
+                                        <p>
+                                            <ul>
+                                                <li style="list-style-type: none;"> There are seven good reasons to indicate the source of consciousness is distinct from the body. </li>
+                                            </ul>
+                                            
+                                            <ul>
+                                                <ul class="long-answer-title">
+                                                    
+                                                    <li style="list-style-type: decimal; color:#AC240F; font-weight: bold;"> &nbsp; Who sees and hears?  </li>
+                                                    <br>
+                                                    <ul>
+                                                        <li style="list-style-type: none;" class="long-answer"> 
+                                                        
+                                                            When I say, “I see” or “I hear”, who is it that is actually seeing or hearing?
+                                                            Is it my eye that sees? Or my ear that hears? A dead body has eyes and ears but it does not see or hear. Why? <br>
+
+                                                            Is the perception of sight or hearing, in the brain or the nervous system of the body then? But a dead body has a brain and nervous system too, yet it does not see or hear. Why?<br>
+                                                            
+                                                            <strong> The answer is that, the perceiving is being done by something or someone distinct from the body </strong>
+                                                        </li>
+                                                    </ul>
+
+                                                    <br>
+
+                                                    <li style="list-style-type: decimal; color:#AC240F; font-weight: bold;"> &nbsp; Put back chemicals in a dead body and make it alive! </li>
+                                                    <br>
+                                                    <ul>
+                                                        <li style="list-style-type: none;" class="long-answer"> 
+                                                        
+                                                            If chemicals are indeed the source of life or consciousness as the scientists say, then one can simply put the chemicals back in a dead body and make it alive again! <br>
+
+                                                            But this cannot be done because life does not come from matter but from some other source. Scientists have never been able to show or prove their claim by making dead things come to life. <br>
+                                                            
+                                                            <strong> It is our unfailing, common experience that life comes only from life and not from dead matter or chemicals. </strong>
+                                                        </li>
+                                                    </ul>
+
+                                                    <br>
+
+                                                    <li style="list-style-type: decimal; color:#AC240F; font-weight: bold;"> &nbsp; Common-sense understanding </li>
+                                                    <br>
+                                                    <ul>
+                                                        <li style="list-style-type: none;" class="long-answer"> 
+
+                                                            When a person dies, the relatives lament, "oh! He has passed away”. <br>
+                                                            But, who has passed away? The person they love is still lying there.  <br>
+                                                            The body has not gone anywhere. So who has gone away?  <br>
+                                                  
+                                                            <strong> Obviously, something which is different from the body and which made the body appear 'alive' has gone away. </strong>
+                                                        </li>
+                                                    </ul>
+
+                                                    <br>
+
+                                                    <li style="list-style-type: decimal; color:#AC240F; font-weight: bold;"> &nbsp; Intuitive understanding </li>
+                                                    <br>
+                                                    <ul>
+                                                        <li style="list-style-type: none;" class="long-answer"> 
+
+                                                            We say, "My hand, "My body", and so on, not “I hand”, or “I body”, meaning thereby that my hand, body etc., are different from ‘me’ the owner of these things.  <br>
+                                                  
+                                                            <strong> So who is that 'me or 'I' who owns this body and who drives it? </strong>
+                                                        </li>
+                                                    </ul>
+
+                                                    <br>
+
+                                                    <li style="list-style-type: decimal; color:#AC240F; font-weight: bold;"> &nbsp; Body changes but "l' remains the same </li>
+                                                    <br>
+                                                    <ul>
+                                                        <li style="list-style-type: none;" class="long-answer"> 
+                                                            At every moment from conception in the womb till death, our body is constantly changing. In his book, "The Human Brain", Prof. John Pfeiffer notes that, "Your body does not contain a single one of the molecules that it contained seven years ago... That means every seven years our whole body changes. Yet, our sense of identity, or “I” ness remains.
+                                                            <br>
+                                                            
+                                                            <strong> In other words the source of "I' ness or consciousness, does not change with changes in the body. Therefore, it must be something different from and superior to the body. </strong>
+                                                        </li>
+                                                    </ul>
+
+                                                    <br>
+                                                    
+                                                    <li style="list-style: none; margin-left: 0; text-indent: -1em; color:#AC240F; font-weight: bold;"> 6&7. &nbsp; Out-of-Body Experiences (OBE) Near-Death-Experiences (NDE) </li>
+                                                    <br>
+                                                    <ul>
+                                                        <li style="list-style-type: none;" class="long-answer"> 
+                                                            Evidence that the source of consciousness must be distinct from the body is also supported by research on Near-Death-Experiences (NDE).                                                            
+                                                            <br>
+                                                            Sometimes, people on the verge of death have reported having extraordinary and baffling experiences that defy modern scientific understanding.
+                                                            <br>
+                                                            <br>
+                                                            NDE includes out of body experiences (OBE) in which people report observing their physical body and events relating to it from a point outside of the body during severe illness or physical trauma resulting into unconsciousness.
+                                                            <br>
+                                                            <br>
+                                                            <strong> Soul is the source of consciousness. </strong>
+                                                            <br>
+                                                            <br>
+                                                            In the Bhagavad Gita Lord Krishna explained that the source of the consciousness is the spirit soul the ‘Atma’ which is eternal and spiritual. We have seen about seven good reasons to believe that the source of consciousness is distinct from the body.
+                                                            <br>
+                                                            Three level of existence: 
+                                                            <ul>
+                                                                <li style="list-style-type: decimal;"> the gross body </li>
+                                                                <li style="list-style-type: decimal;"> the subtle body, and </li>
+                                                                <li style="list-style-type: decimal;"> soul </li>
+                                                            </ul>
+                                                            <br>
+                                                            The gross body is, in ordinary terms, our physical body comprising earth (solid element), water (liquid element), fire (heat element), air (gas element) and ether (space element). Earth is the grossest element and ether is the most subtle.
+                                                            The subtle body comprises mind, intelligence and false ego. These three elements cannot be directly perceived by any of our senses although they can be experienced.
+                                                            <ul>
+                                                                <li style="list-style-type: disc;"> The mind is the storehouse of desires and memories </li>
+                                                                <li style="list-style-type: disc;"> Intelligence is the faculty of discrimination </li>
+                                                                <li style="list-style-type: disc;"> False ego, the subtlest of all brings the eternal soul under illusion and makes it identify itself with the temporary material body. </li>
+                                                                <li style="list-style-type: disc;"> The soul, of course, being non- None material is superior to all the about eight elements is beyond the two bodies and is proprietor of both bodies. </li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    
+                                                </ul>
+                                            </ul>
+
+
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('The law of karma')" v-bind:class="{ 'accordions__button--active': isOpen('The law of karma') }"> The law of karma </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('The law of karma')" v-bind:class="{ 'accordions__button--active': isOpen('The law of karma') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('The law of karma') }">
+                                        <p>
+                                            <ul>
+                                                <li style="list-style-type: none;"> According to the law of karma for every action that is an individual perform there is an appropriate reaction this is a subtle law that governs all the activity of living beings. </li>     
+                                            </ul>
+
+                                            <ul>
+                                                <li style="list-style-type: none;"> There is a similar law in modern science “Every action has an equal and opposite reaction”. </li>     
+                                            </ul>
+
+                                            <ul>
+                                                <li style="list-style-type: none;"> The law of karma is a law of cause-and-effect or action and reaction. This means that for everything we do there will be a reaction, and for everything that is happening there is a past cause (known or unknown). </li>     
+                                            </ul>
+
+                                            <ul>
+                                                <li style="list-style-type: none;"> Three types or Karma </li>  
+                                                <ul>
+                                                    <li style="list-style-type: disc;"> Karma </li>
+                                                    <li style="list-style-type: disc;"> Vikarma </li>
+                                                    <li style="list-style-type: disc;"> Akarma </li>
+                                                </ul>   
+                                            </ul>
+                                            
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+
+                            <section class="accordions__accordion">
+                                <div class="accordions__header">
+                                    <div class="accordions__container container">
+                                        <h7 class="accordions__title" v-on:click="toggleAccordion('WHAT IS YOGA?')" v-bind:class="{ 'accordions__button--active': isOpen('WHAT IS YOGA?') }"> What is ‘Yoga’? </h7>
+                                        <button class="accordions__button" v-on:click="toggleAccordion('WHAT IS YOGA?')" v-bind:class="{ 'accordions__button--active': isOpen('WHAT IS YOGA?') }">
+                                            <div class="accordions__icon">+</div>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="container">
+                                    <div class="accordions__content rich-text" v-bind:class="{ 'accordions__content--expanded': isOpen('WHAT IS YOGA?') }">
+                                        <p>
+                                            <ul>
+                                                <li style="list-style-type: none;"> The word ‘Yoga' comes from the Sanskrit word 'Yuj' which means 'to reunite or link’. It is a link of love and service. The Lord and the soul are eternally and constitutionally linked in a bond of love. To re-establish that link, is yoga. </li>     
+                                            </ul>
+                                            <ul>
+                                                <li style="list-style-type: none;"> ‘Dharma’ means that which cannot be separated from something. </li>     
+                                                <ul>
+                                                    <li style="list-style-type: disc;"> What is it that cannot be separated from fire? Heat and light. </li>
+                                                    <li style="list-style-type: disc;"> From sugar? Sweetness. </li>
+                                                </ul>
+                                            
+                                            </ul>
+                                            <ul>
+                                                <li style="list-style-type: none;"> Thus the ‘dharma’ of fire and sugar are heat and sweetness respectively. </li>     
+                                            </ul>
+                                            <ul>
+                                                <li style="list-style-type: none;"> Similarly, the ‘Dharma’ of the living being is to serve. </li>     
+                                            </ul>
+                                            <ul>
+                                                <li style="list-style-type: none;"> We all have an innate tendency to love and serve. But presently that propensity is being directed towards the people and things of this world. Therefore, it simply ends in frustration. </li>     
+                                                <br>
+                                                <li style="list-style-type: none;"> Only when we repose our loving and serving propensity in the Supreme Lord, Sri Krishna, can we find real fulfillment and happiness. </li>     
+                                         
+                                            </ul>
+                                            <ul>
+                                                <li style="list-style-type: none;"> This is ‘Sanätana-dharma’, or the eternal function of the soul. </li>     
+                                            </ul>
+                                                                                 
+                                            <ul>
+                                                <li style="list-style-type: none;"> <strong> <a style="text-decoration: none; color:#AC240F;" href="../orderfreegita/"> <i>Learn more from your free copy</i> </a> </strong> </li>
+                                            </ul>
+
+                                        </p>
+                                    </div>
+                                </div>
+                            </section>
+
+               
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+        "use strict";
+
+        new Vue({
+            el: '#app',
+            data: {
+                labels: {
+                    expand: 'Expand all +',
+                    collapse: 'Collapse all -'
+                },
+                accordions: {
+                    'What Is Bhagavad-Gita?': {
+                        isOpen: false
+                    },
+                    'What Is Its Purpose?': {
+                        isOpen: false
+                    },
+                    'Who am I?': {
+                        isOpen: false
+                    },
+                    'What is life?': {
+                        isOpen: false
+                    },
+                    'Why One Should Try To Understand Bhagavad-Gita?': {
+                        isOpen: false
+                    },
+                    'What Is The Subject Matter Discussed In Bhagavad-Gita?': {
+                        isOpen: false
+                    },
+                    'Process Of Acquiring Knowledge': {
+                        isOpen: false
+                    },
+                    'What  is Scripture?': {
+                        isOpen: false
+                    },
+                    'What is Consciousness?': {
+                        isOpen: false
+                    },
+                    'What is the source of consciousness?': {
+                        isOpen: false
+                    },
+                    'The law of karma': {
+                        isOpen: false
+                    },
+                    'WHAT IS YOGA?': {
+                        isOpen: false
+                    },
+                }
+            },
+
+            computed: {
+                toggleAllLabel() {
+                    return this.showCollapseAll ? this.labels.collapse : this.labels.expand;
+                },
+
+                areAllAccordionsOpen() {
+                    return Object.keys(this.accordions).every(key => this.accordions[key].isOpen);
+                },
+
+                showCollapseAll() {
+                    return this.areAllAccordionsOpen;
+                },
+
+                showExpandAll() {
+                    return this.showCollapseAll === false;
+                }
+            },
+
+            methods: {
+                toggleAll() {
+                    const newIsOpen = this.showExpandAll;
+                    Object.keys(this.accordions).forEach(key => {
+                        this.accordions[key].isOpen = newIsOpen;
+                    });
+                },
+
+                toggleAccordion(label) {
+                    const accordion = this.accordions[label];
+
+                    if (accordion) {
+                        accordion.isOpen = !accordion.isOpen;
+                    } else {
+                        console.error(`Could not find accordion '${label}'`);
+                    }
+                },
+
+                isOpen(label) {
+                    const accordion = this.accordions[label];
+                    return accordion ? accordion.isOpen : false;
+                }
+            }
+        });
+        </script>
+
+
+        <script src="js/jquery-3.5.1.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
