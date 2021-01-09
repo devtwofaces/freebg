@@ -1,25 +1,48 @@
-// Example starter JavaScript for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
 
-  window.addEventListener('load', function () {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation')
+window.onload=function(){
 
-    // Loop over them and prevent submission
-    Array.prototype.filter.call(forms, function (form) {
-      form.addEventListener('submit', function (event) {
-        if (form.checkValidity() === false) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-        form.classList.add('was-validated')
-      }, false)
-    })
-  }, false)
-}())
-script type="text/javascript">
-  var onloadCallback = function() {
-    alert("grecaptcha is ready!");
-  };
-</script>
+    render();
+  }; 
+  
+
+  var captchaToken = "";
+
+  function render(){
+  
+
+
+    window.recaptchaVerifier = new firebase.auth.RecaptchaVerifier('recaptcha-container', {
+    'size': 'normal',
+    'callback': function(recapchaToken) {
+        
+        captchaToken = recapchaToken;
+
+    }
+    });
+
+    recaptchaVerifier.render();
+
+  }
+
+
+function changeStateInput(e) {
+
+    document.getElementById("stateInput").value = "";
+    document.getElementById("stateInput").value = e.target.value;
+    
+
+}
+
+
+function submitOrder(){
+
+    document.getElementById("verifyRecaptchaToken").value = captchaToken;
+    document.getElementById("orderForm").submit();
+
+}
+
+
+
+
+
+
